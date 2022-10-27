@@ -1,0 +1,4 @@
+/**
+ * Mediatorパターン Demo
+ */
+package mediator;
