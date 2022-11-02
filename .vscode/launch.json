@@ -29,6 +29,7 @@
       "options": [
         "mediator",
         "facade",
+        "memento",
       ],
       "default": "default",
       "description": "引数を選択してください"

@@ -1,5 +1,6 @@
 import facade.FacadeDemo;
 import mediator.MediatorDemo;
+import memento.MementoDemo;
 
 /**
  * 起動クラス
@@ -20,6 +21,9 @@ public class App {
                 break;
             case "facade":
                 new FacadeDemo();
+                break;
+            case "memento":
+                new MementoDemo();
                 break;
             default:
                 System.out.println("正しい引数を指定してください");
