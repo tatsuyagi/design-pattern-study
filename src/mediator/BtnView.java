@@ -1,6 +1,9 @@
 package mediator;
 
 import javax.swing.JButton;
+
+import common.Command;
+
 import java.awt.event.ActionListener;
 
 class BtnView extends JButton implements Command {
