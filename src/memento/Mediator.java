@@ -9,14 +9,12 @@ public class Mediator {
   BtnPrevious btnPrevious;
   BtnClear btnClear;
   LblDisplay show;
-  List<Integer> list;
   List<Memento> undo;
   boolean restart = true;
   int counter = 0, ct = 0;
 
   // ....
   Mediator() {
-    list = new ArrayList<>();
     undo = new ArrayList<>();
   }
 
@@ -29,6 +27,7 @@ public class Mediator {
   }
 
   void registerPrevious(BtnPrevious p) {
+    p.setEnabled(false);
     btnPrevious = p;
   }
 
@@ -40,9 +39,9 @@ public class Mediator {
     show.setForeground(Color.black);
     int num = (int) (Math.random() * 6 + 1);
     int i = counter++;
-    list.add(i, Integer.valueOf(num));
     undo.add(i, new Memento(num));
     show.setText("" + num);
+    btnPrevious.setEnabled(true);
   }
 
   void previous() {
@@ -53,16 +52,17 @@ public class Mediator {
       Memento num = (Memento) undo.get(ct);
       show.setText("" + num.getNum());
       undo.remove(ct);
+    } else {
+      clear();
     }
-    if (undo.size() == 0)
-      show.setText("0");
   }
 
   void clear() {
-    list = new ArrayList<>();
+    show.setForeground(Color.black);
     undo = new ArrayList<>();
     counter = 0;
     show.setText("0");
     btnDice.setEnabled(true);
+    btnPrevious.setEnabled(false);
   }
 }
