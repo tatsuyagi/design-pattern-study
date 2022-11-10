@@ -1,3 +1,4 @@
+import composite.CompositeDemo;
 import facade.FacadeDemo;
 import mediator.MediatorDemo;
 import memento.MementoDemo;
@@ -24,6 +25,9 @@ public class App {
                 break;
             case "memento":
                 new MementoDemo();
+                break;
+            case "composite":
+                new CompositeDemo();
                 break;
             default:
                 System.out.println("正しい引数を指定してください");

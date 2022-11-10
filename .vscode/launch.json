@@ -30,6 +30,7 @@
         "mediator",
         "facade",
         "memento",
+        "composite",
       ],
       "default": "default",
       "description": "引数を選択してください"
