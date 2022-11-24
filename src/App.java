@@ -1,3 +1,4 @@
+import adapter.AdapterDemo;
 import composite.CompositeDemo;
 import facade.FacadeDemo;
 import mediator.MediatorDemo;
@@ -28,6 +29,9 @@ public class App {
                 break;
             case "composite":
                 new CompositeDemo();
+                break;
+            case "adapter":
+                new AdapterDemo();
                 break;
             default:
                 System.out.println("正しい引数を指定してください");
