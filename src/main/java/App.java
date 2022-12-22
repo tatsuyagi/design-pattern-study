@@ -1,6 +1,7 @@
 import adapter.AdapterDemo;
 import composite.CompositeDemo;
 import facade.FacadeDemo;
+import iterator.IteratorDemo;
 import mediator.MediatorDemo;
 import memento.MementoDemo;
 
@@ -32,6 +33,9 @@ public class App {
                 break;
             case "adapter":
                 new AdapterDemo();
+                break;
+            case "iterator":
+                new IteratorDemo();
                 break;
             default:
                 System.out.println("正しい引数を指定してください");

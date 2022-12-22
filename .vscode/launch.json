@@ -32,6 +32,7 @@
         "memento",
         "composite",
         "adapter",
+        "iterator",
       ],
       "default": "default",
       "description": "引数を選択してください"
